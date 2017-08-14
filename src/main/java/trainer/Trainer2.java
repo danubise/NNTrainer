@@ -8,7 +8,10 @@ import nnetwork.OutputData;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.stream.Stream;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.random;
@@ -309,5 +312,71 @@ public class Trainer2 {
         System.out.println("Done...");
         return true;
     }
+
+    public void load(String fname){
+        //fname = "/home/vkurilo/Desktop/git/NNetworkMultyResponse/src/main/java/saved/main7_1";
+        try (Stream<String> stream = Files.lines(Paths.get(fname))) {
+
+            stream.forEach(this::createNeuron);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void createNeuron(String neuronCongig){
+        System.out.println(neuronCongig);
+        String[] config = neuronCongig.split(",");
+        NeironType neironType ;
+        if(config.length>0) {
+            if (config[0].startsWith("INPUT")) {
+                createInputNeuron(config[0]);
+                return;
+            }
+            if (config[0].startsWith("HIDDEN")) {
+                createHiddenNeuro(config[0], config[1], Double.valueOf(config[2]));
+                return;
+            }
+            if (config[0].startsWith("EXIT")) {
+                createExitNeuron(config[0], config[1], Double.valueOf(config[2]));
+            }
+        }
+
+
+    }
+
+    private void createInputNeuron(String name){
+        Neiron inputNeiro = new Neiron(name, NeironType.INPUT);
+        this.neironInputHashMap.put(name, inputNeiro);
+        this.neironAllHashMap.put(name, inputNeiro);
+    }
+
+    private void createHiddenNeuro(String name, String lowLevelNeuron, double weight){
+        if(neironHiddenHashMap.get(name) == null) {
+            Neiron hiddenNeuron = new Neiron(name, NeironType.HIDDEN);
+            hiddenNeuron.addNeirons(this.neironAllHashMap.get(lowLevelNeuron), weight);
+            neironHiddenHashMap.put(name, hiddenNeuron);
+            neironAllHashMap.put(name, hiddenNeuron);
+        }else{
+            Neiron hiddenNeuron = neironHiddenHashMap.get(name);
+            hiddenNeuron.addNeirons(this.neironAllHashMap.get(lowLevelNeuron), weight);
+        }
+    }
+
+    private void  createExitNeuron(String name, String lowLevelNeuron, double weight){
+        if(neironExitHashMap.get(name) == null) {
+            System.out.println("Create new neuron " + name + " with " + lowLevelNeuron + " weight " + weight);
+            Neiron hiddenNeuron = new Neiron(name, NeironType.EXIT);
+            hiddenNeuron.addNeirons(this.neironAllHashMap.get(lowLevelNeuron), weight);
+            neironExitHashMap.put(name, hiddenNeuron);
+            neironAllHashMap.put(name, hiddenNeuron);
+        }else{
+            System.out.println("Add to " + name + " hidden");
+            Neiron hiddenNeuron = neironExitHashMap.get(name);
+            hiddenNeuron.addNeirons(this.neironAllHashMap.get(lowLevelNeuron), weight);
+        }
+    }
+
+
 
 }

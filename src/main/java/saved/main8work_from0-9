@@ -1,77 +1,17 @@
-/usr/lib/jvm/java-8-oracle/bin/java -Dvisualvm.id=235700011447463 -Didea.launcher.port=7533 -Didea.launcher.bin.path=/home/vkurilo/app/idea-IC-163.12024.16/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfxswt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/deploy.jar:/usr/lib/jvm/java-8-oracle/jre/lib/plugin.jar:/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/javaws.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar:/home/vkurilo/Desktop/git/NNetworkMultyResponse/target/classes:/home/vkurilo/app/idea-IC-163.12024.16/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain main8
- 1484999 error: -0.004892255 errorCount :0 total: 5000 treningData: 11EXIT0 -> 0.105673092 == 0.1
-InputData{0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 } ==> OutputData{0.1 }
-EXIT0 -> 0.178871913 == 0.2
-InputData{1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 } ==> OutputData{0.2 }
-EXIT0 -> 0.293365745 == 0.3
-InputData{1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.3 }
-EXIT0 -> 0.395406146 == 0.4
-InputData{1.0 0.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 } ==> OutputData{0.4 }
-EXIT0 -> 0.482119494 == 0.5
-InputData{1.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.5 }
-EXIT0 -> 0.603880891 == 0.6
-InputData{1.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.6 }
-EXIT0 -> 0.690803457 == 0.7
-InputData{1.0 1.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 } ==> OutputData{0.7 }
-EXIT0 -> 0.793543579 == 0.8
-InputData{1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.8 }
-EXIT0 -> 0.913936086 == 0.9
-InputData{1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.9 }
-EXIT0 -> 0.045037746 == 0.01
-InputData{1.0 1.0 1.0 1.0 0.0 1.0 1.0 0.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 } ==> OutputData{0.01 }
 Set value for INPUT0 : 111101101101111
-EXIT0 -> 0.045037746
-One more?: Y/n
-
 Set value for INPUT0 : 111101111001111
-EXIT0 -> 0.913936086
-One more?: Y/n
-
 Set value for INPUT0 : 111101111101111
-EXIT0 -> 0.793543579
-One more?: Y/n
-
 Set value for INPUT0 : 111001001001001
-EXIT0 -> 0.690803457
-One more?: Y/n
-
 Set value for INPUT0 : 111100111101111
-EXIT0 -> 0.603880891
-One more?: Y/n
-
 Set value for INPUT0 : 111100111001111
-EXIT0 -> 0.482119494
-One more?: Y/n
-
 Set value for INPUT0 : 101101111001001
-EXIT0 -> 0.395406146
-One more?: Y/n
-
 Set value for INPUT0 : 111001111001111
-EXIT0 -> 0.293365745
-One more?: Y/n
-
 Set value for INPUT0 : 111001111100111
-EXIT0 -> 0.178871913
-One more?: Y/n
-
 Set value for INPUT0 : 001001001001001
-EXIT0 -> 0.105673092
-One more?: Y/n
-
 Set value for INPUT0 : 000110000011000
-EXIT0 -> 1.000000000
-One more?: Y/n
-
 Set value for INPUT0 : 000000000000000
-EXIT0 -> 1.000000000
-One more?: Y/n
-
 Set value for INPUT0 : 110110110110110
-EXIT0 -> 1.000000000
-One more?: Y/n
-save
-Saving
+
 INPUT0,1.0
 INPUT1,1.0
 INPUT4,1.0
@@ -2743,6 +2683,3 @@ EXIT0,HIDDEN136,0.17317618632856818
 EXIT0,HIDDEN23,19.53364700938344
 EXIT0,HIDDEN89,-1.850568082944327
 EXIT0,HIDDEN64,10.497110338761377
-Done...
-One more?: Y/n
-zx
